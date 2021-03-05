@@ -7,6 +7,7 @@ Pod::Spec.new do |s|
   s.author           = 'Square'
   s.source           = { :git => 'https://github.com/cashapp/AardvarkCrashReport.git', :tag => s.version.to_s }
 
+  s.swift_version = '5.0'
   s.ios.deployment_target = '12.0'
 
   s.static_framework = true
