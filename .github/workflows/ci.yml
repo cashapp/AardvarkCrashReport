@@ -40,4 +40,4 @@ jobs:
       - name: Select Xcode Version
         run: sudo xcode-select --switch /Applications/Xcode_11.7.app/Contents/Developer
       - name: Lint AardvarkCrashReport Podspec
-        run: bundle exec --gemfile=Example/Gemfile pod lib lint --verbose --fail-fast AardvarkCrashReport.podspec
+        run: bundle exec --gemfile=Example/Gemfile pod lib lint --verbose --fail-fast AardvarkCrashReport.podspec --allow-warnings
