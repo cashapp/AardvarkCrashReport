@@ -121,7 +121,7 @@ xcodeBuildArguments.append(
 		"-PBXBuildsContinueAfterErrors=0",
 		"-destination", platform.destination,
 		"-derivedDataPath", platform.derivedDataPath,
-		"ONLY_ACTIVE_ARCH=NO",
+		"ONLY_ACTIVE_ARCH=YES",
 	]
 )
 
