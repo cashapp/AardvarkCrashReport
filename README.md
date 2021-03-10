@@ -65,7 +65,7 @@ Note that the demo app uses an email-based bug reporter, so it will not be able 
 
 ## Requirements
 
-* Xcode 11.0 or later
+* Xcode 12.0 or later
 * iOS 12.0 or later
 
 ## Contributing
