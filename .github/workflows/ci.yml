@@ -35,6 +35,6 @@ jobs:
       - name: Bundle Install
         run: bundle install --gemfile=Example/Gemfile
       - name: Select Xcode Version
-        run: sudo xcode-select --switch /Applications/Xcode_11.7.app/Contents/Developer
+        run: sudo xcode-select --switch /Applications/Xcode_12.2.app/Contents/Developer
       - name: Lint AardvarkCrashReport Podspec
         run: bundle exec --gemfile=Example/Gemfile pod lib lint --verbose --fail-fast AardvarkCrashReport.podspec --allow-warnings
