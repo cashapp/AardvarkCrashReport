@@ -12,7 +12,7 @@ jobs:
     runs-on: macOS-10.15
     strategy:
       matrix:
-        platform: ['iOS_14']
+        platform: ['iOS_14', 'iOS_13']
       fail-fast: false
     steps:
       - name: Checkout Repo
@@ -22,6 +22,14 @@ jobs:
       - name: Select Xcode Version (12.2)
         run: sudo xcode-select --switch /Applications/Xcode_12.2.app/Contents/Developer
         if: matrix.platform == 'iOS_14'
+      - name: Prepare iOS 13 Simulator
+        run: |
+          sudo mkdir -p /Library/Developer/CoreSimulator/Profiles/Runtimes
+          sudo ln -s /Applications/Xcode_11.7.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime /Library/Developer/CoreSimulator/Profiles/Runtimes/iOS\ 13.7.simruntime
+          xcrun simctl list runtimes
+          xcrun simctl create custom-test-device "iPhone 11 Pro" "com.apple.CoreSimulator.SimRuntime.iOS-13-3"
+          xcrun simctl list devices 13.3
+        if: matrix.platform == 'iOS_13'
       - name: Pod Install
         run: bundle exec --gemfile=Example/Gemfile pod install --project-directory=Example
       - name: Build and Test
