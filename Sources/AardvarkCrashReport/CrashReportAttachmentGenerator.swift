@@ -53,12 +53,14 @@ public final class CrashReportAttachmentGenerator {
 
     /// Generates a bug report attachment containing a textual representation of a live crash report.
     ///
+    /// The report will be generated on the thread on which this method is called.
+    ///
     /// - parameter crashReporter: The crash reporter to use to generate the live report.
     public static func attachmentForLiveReport(
         from crashReporter: PLCrashReporter
     ) -> ARKBugReportAttachment? {
         do {
-            let data = try crashReporter.generateLiveReportAndReturnError()
+            let data = try THIS_THREAD_IS_GENERATING_A_CRASH_REPORT(crashReporter)
             let crashReport = try PLCrashReport(data: data)
             return attachment(for: crashReport)
 
@@ -99,4 +101,10 @@ public final class CrashReportAttachmentGenerator {
         )
     }
 
+}
+
+// MARK: -
+
+private func THIS_THREAD_IS_GENERATING_A_CRASH_REPORT(_ crashReporter: PLCrashReporter) throws -> Data {
+    return try crashReporter.generateLiveReportAndReturnError()
 }
