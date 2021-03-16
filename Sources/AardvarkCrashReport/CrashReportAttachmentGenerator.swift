@@ -60,7 +60,7 @@ public final class CrashReportAttachmentGenerator {
         do {
             let data = try crashReporter.generateLiveReportAndReturnError()
             let crashReport = try PLCrashReport(data: data)
-            return attachment(for: crashReport)
+            return attachment(for: crashReport, named: "Live")
 
         } catch {
             return nil
@@ -69,7 +69,10 @@ public final class CrashReportAttachmentGenerator {
 
     // MARK: - Private Methods
 
-    private static func attachment(for crashReport: PLCrashReport) -> ARKBugReportAttachment? {
+    private static func attachment(
+        for crashReport: PLCrashReport,
+        named reportName: String? = nil
+    ) -> ARKBugReportAttachment? {
         guard let formattedText = PLCrashReportTextFormatter.stringValue(
             for: crashReport,
             with: PLCrashReportTextFormatiOS
@@ -84,7 +87,10 @@ public final class CrashReportAttachmentGenerator {
         dateFormatter.dateFormat = "yyyy-MM-dd'_at_'h.mm'_'a"
 
         let fileName: String
-        if let crashDate = crashReport.systemInfo.timestamp {
+        if let reportName = reportName {
+            fileName = "\(reportName).crash"
+
+        } else if let crashDate = crashReport.systemInfo.timestamp {
             let formattedCrashDate = dateFormatter.string(from: crashDate)
             fileName = "Crash_\(formattedCrashDate).crash"
 
