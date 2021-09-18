@@ -8,9 +8,9 @@ PODS:
     - CoreAardvark (~> 3.0)
   - AardvarkMailUI (1.0.0):
     - Aardvark (~> 4.0)
-  - CoreAardvark (3.0.0)
+  - CoreAardvark (3.0.1)
   - Paralayout (0.9.1)
-  - PLCrashReporter (1.8.1)
+  - PLCrashReporter (1.10.0)
 
 DEPENDENCIES:
   - AardvarkCrashReport (from `../AardvarkCrashReport.podspec`)
@@ -36,7 +36,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Paralayout:
-    :commit: e887ae8c7cbf8f3d194569c9a8bfb91e9d9a0fb8
+    :commit: 29dc1d0e914a88f894e51bc43dc6a65b4e1d6129
     :git: https://github.com/square/Paralayout.git
 
 SPEC CHECKSUMS:
@@ -44,9 +44,9 @@ SPEC CHECKSUMS:
   AardvarkCrashReport: a38274b306358f77aa915f1ae5f62207e0019a8c
   AardvarkLoggingUI: e81aae53c747dcc7c7e757d87b989316c1699261
   AardvarkMailUI: a3b61ff1fbd62c9d33703efc3f0cc34597afad73
-  CoreAardvark: 9c943d82736bc261ff4130287aa25e4f35dc7567
+  CoreAardvark: 3a47ac2109c3cb3d81b1f2b53fb52a3b3fd86a1b
   Paralayout: 3e82899bd0d18ad2db21212cd453efa291d2c0cf
-  PLCrashReporter: ea2d252e930f538a9f70f0b81bc9cce656651fbf
+  PLCrashReporter: b8c81dcdb3dd7c4247c00b95ada1f1b37d53fde8
 
 PODFILE CHECKSUM: 1511f97db86d7bfef3721e89da4b9bff28ae494c
 
