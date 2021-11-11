@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'AardvarkCrashReport'
-  s.version          = '1.0.0'
+  s.version          = '2.0.0'
   s.summary          = 'AardvarkCrashReport makes it easy to provide high quality data about crashes in your bug reports.'
   s.homepage         = 'https://github.com/cashapp/AardvarkCrashReport'
   s.license          = { :type => 'Apache 2.0', :file => 'LICENSE' }
