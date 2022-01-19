@@ -15,5 +15,5 @@ Pod::Spec.new do |s|
   s.source_files = 'Sources/AardvarkCrashReport/**/*.{h,m,swift}'
 
   s.dependency 'Aardvark', '~> 4.0'
-  s.dependency 'PLCrashReporter', '~> 1.8'
+  s.dependency 'PLCrashReporter', '~> 1.10'
 end
