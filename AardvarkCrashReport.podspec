@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
 
   s.static_framework = true
 
-  s.source_files = 'Sources/AardvarkCrashReport/**/*.{h,m,swift}'
+  s.source_files = 'Sources/AardvarkCrashReport/**/*.swift'
 
   s.dependency 'Aardvark', '~> 4.0'
   s.dependency 'PLCrashReporter', '~> 1.10'
