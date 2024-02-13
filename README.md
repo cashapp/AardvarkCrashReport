@@ -1,6 +1,6 @@
 # AardvarkCrashReport
 
-[![CI Status](https://img.shields.io/github/workflow/status/cashapp/AardvarkCrashReport/CI/main)](https://github.com/cashapp/AardvarkCrashReport/actions?query=workflow%3ACI+branch%3Amain)
+[![CI Status](https://img.shields.io/github/actions/workflow/status/cashapp/AardvarkCrashReport/ci.yml?branch=main)](https://github.com/cashapp/AardvarkCrashReport/actions?query=workflow%3ACI+branch%3Amain)
 [![Version](https://img.shields.io/cocoapods/v/AardvarkCrashReport.svg?style=flat)](https://cocoapods.org/pods/AardvarkCrashReport)
 [![License](https://img.shields.io/cocoapods/l/AardvarkCrashReport.svg?style=flat)](https://cocoapods.org/pods/AardvarkCrashReport)
 [![Platform](https://img.shields.io/cocoapods/p/AardvarkCrashReport.svg?style=flat)](https://cocoapods.org/pods/AardvarkCrashReport)
