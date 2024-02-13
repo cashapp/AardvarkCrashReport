@@ -106,7 +106,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             )
             crashBugReporter.promptingDelegate = promptingDelegate
 
-            crashBugReporter.composeBugReportWithoutScreenshot()
+            (crashBugReporter as ARKBugReporter).composeBugReportWithoutScreenshot()
         }
     }
 
