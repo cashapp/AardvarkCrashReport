@@ -132,7 +132,7 @@ extension ViewController {
                 button.layer.cornerRadius = button.bounds.height / 2
             }
 
-            applySubviewDistribution(
+            applyVerticalSubviewDistribution(
                 [
                     [instructionsLabel.distributionItem, 32.fixed],
                     buttons.flatMap { [$0.distributionItem, 24.fixed] }.dropLast()

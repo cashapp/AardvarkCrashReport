@@ -1,14 +1,13 @@
 use_frameworks!
 
-platform :ios, '12.0'
+platform :ios, '14.0'
 
 target 'AardvarkCrashReportDemo' do
   pod 'AardvarkCrashReport', :path => '../AardvarkCrashReport.podspec'
-  pod 'AardvarkLoggingUI', '~> 1.0'
-  pod 'AardvarkMailUI', '~> 1.0'
-  pod 'PLCrashReporter', '~> 1.8'
 
-  # The latest release of Paralayout has a bug in Xcode 12, so use the 1.0 development branch for now. Once 1.0 is
-  # released, we should switch over to the published version.
-  pod 'Paralayout', :git => 'https://github.com/square/Paralayout.git', :branch => 'develop/1.0'
+  pod 'Aardvark', '~> 5.0'
+  pod 'AardvarkLoggingUI', '~> 2.0'
+  pod 'AardvarkMailUI', '~> 2.0'
+  pod 'Paralayout', :git => 'https://github.com/square/Paralayout.git', :tag => '1.0.0-rc.5'
+  pod 'PLCrashReporter', '~> 1.10'
 end

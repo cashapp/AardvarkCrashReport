@@ -65,8 +65,8 @@ Note that the demo app uses an email-based bug reporter, so it will not be able 
 
 ## Requirements
 
-* Xcode 12.0 or later
-* iOS 12.0 or later
+* Xcode 14.0 or later
+* iOS 14.0 or later
 
 ## Contributing
 
@@ -75,7 +75,7 @@ We’re glad you’re interested in AardvarkCrashReport, and we’d love to see 
 ## License
 
 ```
-Copyright 2021 Square, Inc.
+Copyright 2024 Block, Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
