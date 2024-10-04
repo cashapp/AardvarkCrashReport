@@ -17,6 +17,10 @@
 import Aardvark
 import CrashReporter
 
+#if SWIFT_PACKAGE
+import AardvarkSwift
+#endif
+
 public final class CrashReportAttachmentGenerator {
 
     // MARK: - Public Static Method

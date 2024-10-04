@@ -1,0 +1,24 @@
+{
+  "originHash" : "549469f9f553a93950ff05d44df84d6f9fbc6bed57d3b703d1d2c0c5e81bad4d",
+  "pins" : [
+    {
+      "identity" : "aardvark",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/square/Aardvark",
+      "state" : {
+        "revision" : "2eb62ce13df23128dcc89b70cf200d369d47dbbd",
+        "version" : "5.2.0"
+      }
+    },
+    {
+      "identity" : "plcrashreporter",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/microsoft/plcrashreporter",
+      "state" : {
+        "revision" : "6752f71de206f6a53fa6a758c3660fd9a7fe7527",
+        "version" : "1.11.2"
+      }
+    }
+  ],
+  "version" : 3
+}
