@@ -39,3 +39,16 @@ jobs:
         run: bundle install --gemfile=Example/Gemfile
       - name: Lint AardvarkCrashReport Podspec
         run: bundle exec --gemfile=Example/Gemfile pod lib lint --verbose --fail-fast AardvarkCrashReport.podspec --allow-warnings
+  swift-build:
+    name: Swift Build
+    runs-on: macos-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+      - name: Build
+        run: |
+          sudo xcode-select -s /Applications/Xcode_15.4.0.app
+          xcodebuild build \
+            -scheme AardvarkCrashReport \
+            -sdk iphonesimulator17.5 \
+            -destination "OS=17.5,name=iPhone 15 Pro"
